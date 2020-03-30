@@ -84,7 +84,8 @@ enum {
   TAG_TH,
   TAG_VIDEO,
   TAG_AUDIO,
-  TAG_SOURCE
+  TAG_SOURCE,
+  TAG_LR
 };
 
 /* The list of known tags and functions used for handling them.  Most
@@ -118,7 +119,8 @@ static struct known_tag {
   { TAG_TH,      "th",          tag_find_urls },
   { TAG_VIDEO,   "video",       tag_find_urls },
   { TAG_AUDIO,   "audio",       tag_find_urls },
-  { TAG_SOURCE,  "source",      tag_find_urls }
+  { TAG_SOURCE,  "source",      tag_find_urls },
+  { TAG_LR,  	 "div",         tag_find_urls }
 };
 
 /* tag_url_attributes documents which attributes of which tags contain
@@ -170,7 +172,8 @@ static struct {
   { TAG_VIDEO,          "poster",       ATTR_INLINE },
   { TAG_AUDIO,          "src",          ATTR_INLINE },
   { TAG_AUDIO,          "poster",       ATTR_INLINE },
-  { TAG_SOURCE,         "src",          ATTR_INLINE }
+  { TAG_SOURCE,         "src",          ATTR_INLINE },
+  { TAG_LR,          	"audio",        ATTR_INLINE }
 };
 
 /* The lists of interesting tags and attributes are built dynamically,
